@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;          
+    padding: 1rem 2rem;           
+    background-color: black;       
+    color: purple;                
+    position: sticky;            
+    top: 0;
+    width: 100%;
+    z-index: 1000;               
+}
+
+.nav-links {
+    font-family: 'Inter', sans-serif;
+    display: flex; 
+    list-style: none; 
+    gap: 40px; 
+    transition: 0.3s;
+}
+
+.nav-links a {
+    color: white; 
+    text-decoration: none; 
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: purple; 
+    transform: scale(1.1);
+}
+
+.img-1 img {
+    height: 70px; 
+    width: auto;
+    display: block;
+}
+
+.img-2 img {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+/* Hero & Content */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.image-frame {
+    color: white;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+    background-color: black;
+    border: 3px solid purple;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(128, 0, 128, 0.5);
+}
+
+.image-frame img {
+    width: 400px;           
+    height: 350px;         
+    object-fit: cover;      
+    border-radius: 8px;     
+    transition: 0.3s;       
+}
+
+.game-card {
+    flex: 1 1 300px;
+    max-width: 450px;
+    width: 400px;
+    background-color: #111; 
+    border-radius: 12px;
+    overflow: hidden; 
+    transition: 0.3s;
+    border: 1px solid #333;
+    text-align: center; 
+}
+
+.game-info {
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.game-info h3 {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.game-info .price {
+    color: #a020f0; 
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Responsive  */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 1.5rem;
+    }
+
+    .img-1 { order: 1; }
+    .nav-links { 
+        order: 2; 
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .img-2 { order: 3; }
+
+    .img-1 img { height: 60px; }
+    .img-2 img { height: 40px; }
+
+    .image-frame {
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+    }
+
+    .image-frame img, .game-card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
